@@ -43,12 +43,14 @@ import Card from './card.vue';
       },
 
       draw: function() {
-        d3.dsv(",", "board_games.csv", function(d) {
-      return {
-        source: d.source,
-        target: d.target,
-        value: +d.value
-      }
+        d3.dsv(",", "all_edges.csv", function(d) {
+          d3.dsv(",", "school_totals.csv", function(e) {
+          return {
+            source: d.source,
+            target: d.target,
+            value: parseFloat(d.value)
+          }
+
     }).then(data => {
 
     //degree map
@@ -94,7 +96,8 @@ import Card from './card.vue';
       if(Dmap.has(link.source) && Dmap.has(link.target)){
         let source = renderNode[link.source] || (renderNode[link.source] = {name: link.source});
         let target = renderNode[link.target] || (renderNode[link.target] = {name: link.target});
-        renderLink.push({source, target})
+        let value = link.value
+        renderLink.push({source, target, value})
       }
   });
   
@@ -127,11 +130,32 @@ import Card from './card.vue';
 
   // add the links
   var path = svg.append("g")
-      .selectAll("path")
-      .data(renderLink)
-      .enter()
-      .append("path")
-      .attr("class", function(d) { return "link" });
+            .selectAll("path")
+            .data(renderLink)
+            .enter()
+            .append("path")
+            .attr("class", function (d) {
+                return "link ";
+            })
+            .style("stroke", function (d) {
+                if (d.value == 0)
+                    return "gray";
+                else
+                    return "green";
+            })
+            .style("stroke-width", function (d) {
+                console.log("val",d)
+                return "" + String(d.value / 70) + "px"
+            })
+            .style("stroke-dasharray", function (d) {
+              return "1 0";
+            });
+  //     var path = svg.append("g")
+  //     .selectAll("path")
+  //     .data(renderLink)
+  //     .enter()
+  //     .append("path")
+  //     .attr("class", function(d) { return "link" });
 
   // define the nodes
   var node = svg.selectAll(".node")
@@ -292,7 +316,7 @@ import Card from './card.vue';
 
 path.link {
   fill: none;
-  stroke: green;
+  stroke: black;
   stroke-width: 1.5px;
   stroke-dasharray:10
 }

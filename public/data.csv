@@ -1,0 +1,696 @@
+id,submitter,categories,abstract,title,affiliation
+0,A. Artale,cs.AI,"  A class of interval-based temporal languages for uniformly representing and
+reasoning about actions and plans is presented. Actions are represented by
+describing what is true while the action itself is occurring, and plans are
+constructed by temporally relating actions and world states. The temporal
+languages are members of the family of Description Logics, which are
+characterized by high expressivity combined with good computational properties.
+The subsumption problem for a class of temporal Description Logics is
+investigated and sound and complete decision procedures are given. The basic
+language TL-F is considered first: it is the composition of a temporal logic TL
+-- able to express interval temporal networks -- together with the non-temporal
+logic F -- a Feature Description Logic. It is proven that subsumption in this
+language is an NP-complete problem. Then it is shown how to reason with the
+more expressive languages TLU-FU and TL-ALCF. The former adds disjunction both
+at the temporal and non-temporal sides of the language, the latter extends the
+non-temporal side with set-valued features (i.e., roles) and a propositionally
+complete language.
+",A Temporal Description Logic for Reasoning about Actions and Plans,University of Florence
+1,Adam Stewart,cs.CV cs.LG,"  Remotely sensed geospatial data are critical for applications including
+precision agriculture, urban planning, disaster monitoring and response, and
+climate change research, among others. Deep learning methods are particularly
+promising for modeling many remote sensing tasks given the success of deep
+neural networks in similar computer vision tasks and the sheer volume of
+remotely sensed imagery available. However, the variance in data collection
+methods and handling of geospatial metadata make the application of deep
+learning methodology to remotely sensed data nontrivial. For example, satellite
+imagery often includes additional spectral bands beyond red, green, and blue
+and must be joined to other geospatial data sources that can have differing
+coordinate systems, bounds, and resolutions. To help realize the potential of
+deep learning for remote sensing applications, we introduce TorchGeo, a Python
+library for integrating geospatial data into the PyTorch deep learning
+ecosystem. TorchGeo provides data loaders for a variety of benchmark datasets,
+composable datasets for generic geospatial data sources, samplers for
+geospatial data, and transforms that work with multispectral imagery. TorchGeo
+is also the first library to provide pre-trained models for multispectral
+satellite imagery (e.g. models that use all bands from the Sentinel 2
+satellites), allowing for advances in transfer learning on downstream remote
+sensing tasks with limited labeled data. We use TorchGeo to create reproducible
+benchmark results on existing datasets and benchmark our proposed method for
+preprocessing geospatial imagery on-the-fly. TorchGeo is open-source and
+available on GitHub: https://github.com/microsoft/torchgeo.
+",TorchGeo: deep learning with geospatial data,University of Southampton
+2,Adam Stewart,astro-ph.HE,"  We investigate the relation between the radio (F_r) and optical (F_o) flux
+densities of a variety of classes of radio transients and variables, with the
+aim of analysing whether this information can be used, in the future, to
+classify such events. Using flux density values between 1-10 GHz and the
+optical bands V and R, we build a sample with a total of 12,441 F_r and F_o
+measurements. The sample contains both Galactic objects, such as stellar
+sources and X-ray binaries, and extragalactic objects, such as gamma-ray bursts
+and quasars. By directly comparing the two parameters, it is already possible
+to distinguish between the Galactic and extragalactic populations. Although
+individual classes are harder to separate from the F_r-F_o parameter space to a
+high accuracy, and can only provide approximations, the basic approach provides
+an already useful foundation to develop a more accurate classification
+technique. In addition, we illustrate how example objects from different
+classes move in the parameter space as they evolve over time, offering a
+feature that could be used to reduce the confusion between classes. A small,
+blind test of the classification performance is also undertaken using a
+catalogue of FIRST transient and variable sources, to demonstrate the
+advantages and current limitations of the approach. With more multi-wavelength
+data becoming available in the future, we discuss other classification
+techniques which the F_r-F_o method could be combined with and potentially
+become an important part of an automatic radio transient classification system.
+",On the optical counterparts of radio transients and variables,University of Southampton
+3,Adam Stewart,astro-ph.HE,"  This chapter provides an overview of the possibilities for transient and
+variable-source astrophysics with the Square Kilometre Array. While subsequent
+chapters focus on the astrophysics of individual events, we focus on the
+broader picture, and how to maximise the science coming from the telescope. The
+SKA as currently designed will be a fantastic and ground-breaking facility for
+radio transient studies, but the scientifc yield will be dramatically increased
+by the addition of (i) near-real-time commensal searches of data streams for
+events, and (ii) on occasion, rapid robotic response to Target-of-Opprtunity
+style triggers.
+",Transient Astrophysics with the Square Kilometre Array,University of Southampton
+4,Adam Stewart,astro-ph.HE astro-ph.IM,"  We present the results of a four-month campaign searching for low-frequency
+radio transients near the North Celestial Pole with the Low-Frequency Array
+(LOFAR), as part of the Multifrequency Snapshot Sky Survey (MSSS). The data
+were recorded between 2011 December and 2012 April and comprised 2149 11-minute
+snapshots, each covering 175 deg^2. We have found one convincing candidate
+astrophysical transient, with a duration of a few minutes and a flux density at
+60 MHz of 15-25 Jy. The transient does not repeat and has no obvious optical or
+high-energy counterpart, as a result of which its nature is unclear. The
+detection of this event implies a transient rate at 60 MHz of 3.9 (+14.7, -3.7)
+x 10^-4 day^-1 deg^-2, and a transient surface density of 1.5 x 10^-5 deg^-2,
+at a 7.9-Jy limiting flux density and ~10-minute time-scale. The campaign data
+were also searched for transients at a range of other time-scales, from 0.5 to
+297 min, which allowed us to place a range of limits on transient rates at 60
+MHz as a function of observation duration.
+","LOFAR MSSS: Detection of a low-frequency radio transient in 400 hrs of
+  monitoring of the North Celestial Pole",University of Southampton
+5,Adam Stewart,astro-ph.IM,"  This is the third installment in a series of papers in which we investigate
+calibration artefacts. Calibration artefacts (also known as ghosts or spurious
+sources) are created when we calibrate with an incomplete model. In the first
+two papers of this series we developed a mathematical framework which enabled
+us to study the ghosting mechanism itself. An interesting concomitant of the
+second paper was that ghosts appear in symmetrical pairs. This could possibly
+account for spurious symmetrization. Spurious symmetrization refers to the
+appearance of a spurious source (the anti-ghost) symmetrically opposite an
+unmodelled source around a modelled source. The analysis in the first two
+papers indicates that the anti-ghost is usually very faint, in particular when
+a large number of antennas are used. This suggests that spurious symmetrization
+will mainly occur at an almost undetectable flux level. In this paper, we show
+that phase-only calibration produces an anti-ghost that is $N$-times (where $N$
+denotes the number of antennas in the array) as bright as the one produced by
+phase and amplitude calibration and that this already bright ghost can be
+further amplified by the primary beam correction.
+","Calibration artefacts in radio interferometry. III. Phase-only
+  calibration and primary beam correction",University of Southampton
+6,Ajit P. Singh,cs.LG stat.ML,"  Relational learning can be used to augment one data source with other
+correlated sources of information, to improve predictive accuracy. We frame a
+large class of relational learning problems as matrix factorization problems,
+and propose a hierarchical Bayesian model. Training our Bayesian model using
+random-walk Metropolis-Hastings is impractically slow, and so we develop a
+block Metropolis-Hastings sampler which uses the gradient and Hessian of the
+likelihood to dynamically tune the proposal. We demonstrate that a predictive
+model of brain response to stimuli can be improved by augmenting it with side
+information about the stimuli.
+",A Bayesian Matrix Factorization Model for Relational Data,Carnegie Mellon University
+7,Ajit P. Singh,cs.CE q-bio.QM,"  Shotgun proteomics is a high-throughput technology used to identify unknown
+proteins in a complex mixture. At the heart of this process is a prediction
+task, the spectrum identification problem, in which each fragmentation spectrum
+produced by a shotgun proteomics experiment must be mapped to the peptide
+(protein subsequence) which generated the spectrum. We propose a new algorithm
+for spectrum identification, based on dynamic Bayesian networks, which
+significantly outperforms the de-facto standard tools for this task: SEQUEST
+and Mascot.
+","Spectrum Identification using a Dynamic Bayesian Network Model of Tandem
+  Mass Spectra",Carnegie Mellon University
+8,Akihiko Inoue,math.PR,"  We introduce a class of Gaussian processes with stationary increments which
+exhibit long-range dependence. The class includes fractional Brownian motion
+with Hurst parameter H>1/2 as a typical example. We establish infinite and
+finite past prediction formulas for the processes in which the predictor
+coefficients are given explicitly in terms of the MA and AR coefficients.
+",Prediction of Fractional Processes with Long-range Dependence,Kyushu University
+9,Akihiko Inoue,math.PR math.ST stat.TH,"  We consider an intersection of past and future property of multivariate
+stationary processes which is the key to deriving various representation
+theorems for their linear predictor coefficient matrices. We extend useful
+spectral characterizations for this property from univariate processes to
+multivariate processes.
+","The intersection of past and future for multivariate stationary
+  processes",Kyushu University
+10,Akihiko Inoue,math.PR math.ST stat.TH,"  Some of the most important results in prediction theory and time series
+analysis when finitely many values are removed from or added to its infinite
+past have been obtained using difficult and diverse techniques ranging from
+duality in Hilbert spaces of analytic functions (Nakazi, 1984) to linear
+regression in statistics (Box and Tiao, 1975). We unify these results via a
+finite-dimensional duality lemma and elementary ideas from the linear algebra.
+The approach reveals the inherent finite-dimensional character of many
+difficult prediction problems, the role of duality and biorthogonality for a
+finite set of random variables. The lemma is particularly useful when the
+number of missing values is small, like one or two, as in the case of
+Kolmogorov and Nakazi prediction problems. The stationarity of the underlying
+process is not a requirement. It opens up the possibility of extending such
+results to nonstationary processes.
+","Applications of a finite-dimensional duality principle to some
+  prediction problems",Kyushu University
+11,Akihiko Inoue,math.PR q-fin.MF,"  We introduce a Vasicek-type short rate model which has two additional
+parameters representing memory effect. This model presents better results in
+yield curve fitting than the classical Vasicek model. We derive closed-form
+expressions for the prices of bonds and bond options. Though the model is
+non-Markov, there exists an associated Markov process which allows one to apply
+usual numerical methods to the model. We derive analogs of an affine term
+structure and term structure equations for the model, and, using them, we
+present a numerical method to evaluate contingent claims.
+",A Vasicek-type short rate model with memory effect,Kyushu University
+12,Akihiko Inoue,q-fin.PR math.PR q-fin.RM,"  We present a general approach to the pricing of products in finance and
+insurance in the multi-period setting. It is a combination of the utility
+indifference pricing and optimal intertemporal risk allocation. We give a
+characterization of the optimal intertemporal risk allocation by a first order
+condition. Applying this result to the exponential utility function, we obtain
+an essentially new type of premium calculation method for a popular type of
+multi-period insurance contract. This method is simple and can be easily
+implemented numerically. We see that the results of numerical calculations are
+well coincident with the risk loading level determined by traditional
+practices. The results also suggest a possible implied utility approach to
+insurance pricing.
+",Optimal intertemporal risk allocation applied to insurance pricing,Kyushu University
+13,Akihiko Inoue,math.PR math.ST stat.TH,"  For a multivariate stationary process, we develop explicit representations
+for the finite predictor coefficient matrices, the finite prediction error
+covariance matrices and the partial autocorrelation function (PACF) in terms of
+the Fourier coefficients of its phase function in the spectral domain. The
+derivation is based on a novel alternating projection technique and the use of
+the forward and backward innovations corresponding to the predictions based on
+the infinite past and future, respectively. We show that such representations
+are ideal for studying the rates of convergence of the finite predictor
+coefficients, prediction error covariances, and the PACF as well as for proving
+a multivariate version of Baxter's inequality for a multivariate FARIMA process
+with a common fractional differencing order for all components of the process.
+","Baxter's inequality for finite predictor coefficients of multivariate
+  long-memory stationary processes",Kyushu University
+14,Akihiko Inoue,math.PR math.ST stat.TH,"  The aim of this paper is to prove an analogue of Baxter's inequality for
+fractional Brownian motion-type processes with Hurst index less than 1/2. This
+inequality is concerned with the norm estimate of the difference between
+finite- and infinite-past predictor coefficients.
+","Baxter's inequality for fractional Brownian motion-type processes with
+  Hurst index less than 1/2",Kyushu University
+15,Akihiko Inoue,math.PR,"  We derive a closed-form expression for the finite predictor coefficients of
+multivariate ARMA (autoregressive moving-average) processes. The expression is
+given in terms of several explicit matrices that are of fixed sizes independent
+of the number of observations. The significance of the expression is that it
+provides us with a linear-time algorithm to compute the finite predictor
+coefficients. In the proof of the expression, a correspondence result between
+two relevant matrix-valued outer functions plays a key role. We apply the
+expression to determine the asymptotic behavior of a sum that appears in the
+autoregressive model fitting and the autoregressive sieve bootstrap. The
+results are new even for univariate ARMA processes.
+","Closed-form expression for finite predictor coefficients of multivariate
+  ARMA processes",Kyushu University
+16,Akihiko Inoue,math.PR math.CA,"  We prove a representation of the partial autocorrelation function (PACF) of a
+stationary process, or of the Verblunsky coefficients of its normalized
+spectral measure, in terms of the Fourier coefficients of the phase function.
+It is not of fractional form, whence simpler than the existing one obtained by
+the second author. We apply it to show a general estimate on the Verblunsky
+coefficients for short-memory processes as well as the precise asymptotic
+behaviour, with remainder term, of those for FARIMA processes.
+",An explicit representation of Verblunsky coefficients,Kyushu University
+17,Akihiko Inoue,math.ST math.PR stat.TH,"  We consider the finite-past predictor coefficients of stationary time series,
+and establish an explicit representation for them, in terms of the MA and AR
+coefficients. The proof is based on the alternate applications of projection
+operators associated with the infinite past and the infinite future. Applying
+the result to long memory processes, we give the rate of convergence of the
+finite predictor coefficients and prove an inequality of Baxter-type.
+","Explicit representation of finite predictor coefficients and its
+  applications",Kyushu University
+18,Akihiko Inoue,math.FA cs.NA math.NA math.PR,"  We derive novel explicit formulas for the inverses of truncated block
+Toeplitz matrices that correspond to a multivariate minimal stationary process.
+The main ingredients of the formulas are the Fourier coefficients of the phase
+function attached to the spectral density of the process. The derivation of the
+formulas is based on a recently developed finite prediction theory applied to
+the dual process of the stationary process. We illustrate the usefulness of the
+formulas by two applications. The first one is a strong convergence result for
+solutions of general block Toeplitz systems for a multivariate short-memory
+process. The second application is closed-form formulas for the inverses of
+truncated block Toeplitz matrices corresponding to a multivariate ARMA process.
+The significance of the latter is that they provide us with a linear-time
+algorithm to compute the solutions of corresponding block Toeplitz systems.
+","Explicit formulas for the inverses of Toeplitz matrices, with
+  applications",Kyushu University
+19,Akihiko Inoue,math.PR,"  We study the linear filtering problem for systems driven by continuous
+Gaussian processes with memory described by two parameters. The driving
+processes have the virtue that they possess stationary increments and simple
+semimartingale representations simultaneously. It allows for straightforward
+parameter estimations. After giving the semimartingale representations of the
+processes by innovation theory, we derive Kalman-Bucy-type filtering equations
+for the systems. We apply the result to the optimal portfolio problem for an
+investor with partial observations. We illustrate the tractability of the
+filtering algorithm by numerical implementations.
+",Linear filtering of systems with memory,Kyushu University
+20,Akihiko Inoue,math.PR,"  We construct a binary market model with memory that approximates a
+continuous-time market model driven by a Gaussian process equivalent to
+Brownian motion. We give a sufficient conditions for the binary market to be
+arbitrage-free. In a case when arbitrage opportunities exist, we present the
+rate at which the arbitrage probability tends to zero as the number of periods
+goes to infinity.
+",Binary market models with memory,Kyushu University
+21,Akihiko Inoue,math.PR q-fin.PM,"  We consider a financial market model driven by an R^n-valued Gaussian process
+with stationary increments which is different from Brownian motion. This
+driving noise process consists of $n$ independent components, and each
+component has memory described by two parameters. For this market model, we
+explicitly solve optimal investment problems. These include (i) Merton's
+portfolio optimization problem; (ii) the maximization of growth rate of
+expected utility of wealth over the infinite horizon; (iii) the maximization of
+the large deviation probability that the wealth grows at a higher rate than a
+given benchmark. The estimation of paremeters is also considered.
+",Optimal long term investment model with memory,Kyushu University
+22,Akihiko Inoue,math.SP math.PR,"  We prove a representation of the partial autocorrelation function (PACF), or
+the Verblunsky coefficients, of a stationary process in terms of the AR and MA
+coefficients. We apply it to show the asymptotic behaviour of the PACF. We also
+propose a new definition of short and long memory in terms of the PACF.
+","AR and MA representation of partial autocorrelation functions, with
+  applications",Kyushu University
+23,Akira Miura,cond-mat.supr-con,"  The crystal structures of superconducting LaO1-xFxBiS2 (x ~ 0.23, 0.46) were
+determined by single-crystal X-ray diffraction analysis. Their space group was
+P4/nmm. Distortion of the Bi-S plane changed when the F content was increased
+from 0.23 to 0.46, and a nearly flat Bi-S plane was formed at x ~ 0.46.
+Computational calculations supported this effect of F doping on distortion of
+Bi-S plane. LaO1-xFxBiS2 with higher F contents were computationally predicted
+to be thermodynamically more unstable under ambient pressure. We discussed the
+bonding, conductivities, and synthetic routes of LaO1-xFxBiS2.
+","Crystal structures of LaO1-xFxBiS2 (x~0.23, 0.46): effect of F doping on
+  distortion of Bi-S plane",University of Tokyo
+24,Akira Miura,cond-mat.mtrl-sci,"  The band gaps of isostructural Bi2OS2 and LaOBiS2 were examined using optical
+absorption and discussed with the band structures calculated based on the
+crystal structures determined using synchrotron X-ray diffraction. The Bi 6p
+and S 3p orbitals in the Bi-S plane were computationally predicted to
+constitute the bands near the Fermi level. The optical reflectance spectra of
+Bi2OS2 and LaOBiS2 showed optical band gaps of ca. 1.0 eV, which were close to
+the computationally calculated direct band gaps of ca. 0.8 eV. Our results show
+that Bi2OS2 and LaOBiS2 are semiconductors containing direct band gaps of
+0.8-1.0 eV, and they are suggested to be candidates for optoelectronic
+materials in the near-infrared region without highly toxic elements.
+",Structures and Optical Absorption of Bi2OS2 and LaOBiS2,University of Tokyo
+25,Akiyoshi Shioura,math.OC,"  In this paper we consider a new problem of minimizing an M-convex function
+under L1-distance constraint (MML1); the constraint is given by an upper bound
+for L1-distance between a feasible solution and a given ""center."" This is
+motivated by a nonlinear integer programming problem for re-allocation of dock
+capacity in a bike sharing system discussed by Freund et al. (2017). The main
+aim of this paper is to better understand the combinatorial structure of the
+dock re-allocation problem through the connection with M-convexity, and show
+its polynomial-time solvability using this connection. For this, we first show
+that the dock re-allocation problem can be reformulated in the form of (MML1).
+We then present a pseudo-polynomial-time algorithm for (MML1) based on steepest
+descent approach. We also propose two polynomial-time algorithms for (MML1) by
+replacing the L1-distance constraint with a simple linear constraint. Finally,
+we apply the results for (MML1) to the dock re-allocation problem to obtain a
+pseudo-polynomial-time steepest descent algorithm and also polynomial-time
+algorithms for this problem. The proposed algorithm is based on a
+proximity-scaling algorithm for a relaxation of the dock re-allocation problem,
+which is of interest in its own right.
+",M-convex Function Minimization Under L1-Distance Constraint,Tohoku University
+26,Alan Williams,physics.bio-ph q-bio,"  We investigate the stability of negative image equilibria in mean synaptic
+weight dynamics governed by spike-timing dependent plasticity (STDP). The
+neural architecture of the model is based on the electrosensory lateral line
+lobe (ELL) of mormyrid electric fish, which forms a negative image of the
+reafferent signal from the fish's own electric discharge to optimize detection
+of external electric fields. We derive a necessary and sufficient condition for
+stability, for arbitrary postsynaptic potential functions and arbitrary
+learning rules. We then apply the general result to several examples of
+biological interest.
+","Stability of Negative Image Equilibria in Spike-Timing Dependent
+  Plasticity",University of Manchester
+27,Alan Williams,q-bio.NC,"  Random walk methods are used to calculate the moments of negative image
+equilibrium distributions in synaptic weight dynamics governed by spike-timing
+dependent plasticity (STDP). The neural architecture of the model is based on
+the electrosensory lateral line lobe (ELL) of mormyrid electric fish, which
+forms a negative image of the reafferent signal from the fish's own electric
+discharge to optimize detection of sensory electric fields. Of particular
+behavioral importance to the fish is the variance of the equilibrium
+postsynaptic potential in the presence of noise, which is determined by the
+variance of the equilibrium weight distribution. Recurrence relations are
+derived for the moments of the equilibrium weight distribution, for arbitrary
+postsynaptic potential functions and arbitrary learning rules. For the case of
+homogeneous network parameters, explicit closed form solutions are developed
+for the covariances of the synaptic weight and postsynaptic potential
+distributions.
+",Random Walks for Spike-Timing Dependent Plasticity,University of Manchester
+28,Alberto Verjovsky,math.AG math.CV,"  We present a proof of Chow's theorem using two results of Errett Bishop
+retated to volumes and limits of analytic varieties. We think this approach
+suggested a long time ago in the beautiful book by Gabriel Stolzenberg, is very
+attractive and easier for students and newcomers to understand, also the theory
+presented here is linked to areas of mathematics that are not usually
+associated with Chow's theorem. Furthermore, Bishop's results imply both Chow's
+and Remmert-Stein's theorems directly, meaning that this approach is more
+economic and just as profound as Remmert-Stein's proof. At the end of the paper
+there is a comparison table that explains how Bishop's theorems generalize to
+several complex variables classical results of one complex variable.
+",Chow's Theorem Revisited,National Autonomous University of Mexico
+29,Alberto Verjovsky,math.GT math.MG,"  The $n$-skeleton of the canonical cubulation $\cal C$ of $\mathbb{R}^{n+2}$
+into unit cubes is called the {\it canonical scaffolding} ${\cal{S}}$. In this
+paper, we prove that any smooth, compact, closed, $n$-dimensional submanifold
+of $\mathbb{R}^{n+2}$ with trivial normal bundle can be continuously isotoped
+by an ambient isotopy to a cubic submanifold contained in ${\cal{S}}$. In
+particular, any smooth knot $\mathbb{S}^{n}\hookrightarrow\mathbb{R}^{n+2}$ can
+be continuously isotoped to a knot contained in ${\cal{S}}$.
+","Any smooth knot $\mathbb{S}^{n}\hookrightarrow\mathbb{R}^{n+2}$ is
+  isotopic to a cubic knot contained in the canonical scaffolding of
+  $\mathbb{R}^{n+2}$",National Autonomous University of Mexico
+30,Alberto Verjovsky,math.CV,"  In this paper we present a series of seemingly unrelated results of Complex
+Analysis which are in fact connected via a different approach to their proofs
+using the results of Errett Bishop of volumes and limits of analytic varieties.
+We start by proving Chow's theorem by a technique suggested long time ago in
+the beautiful book by Gabriel Stolzenberg. We think this approach is very
+attractive and easier for students and newcomers to understand; also the theory
+presented here is linked to areas of mathematics that are not usually
+associated with Chow's result. In addition, Bishop's results imply both Chow's
+and Remmert-Stein's theorems directly, meaning that this view is simpler and
+just as profound as Remmert-Stein's proof. After that, we give a comparison
+table that explains how Bishop's theorems generalize to several complex
+variables classical results of one complex variable and prove Montel's
+compactness theorem using the techniques presented here. Finally we give an
+alternative proof of a theorem of Edwards, Millet and Sullivan of foliations
+with compact leaves for the case of complex foliations in K\""ahler manifolds.
+","Errett Bishop theorems on Complex Analytic Sets: Chow's Theorem
+  Revisited and Foliations with all leaves Compact on K\""ahler Manifolds",National Autonomous University of Mexico
+31,Alberto Verjovsky,math.GT math.DS,"  In this paper we construct infinitely many wild knots,
+$\mathbb{S}^{n}\hookrightarrow\mathbb{S}^{n+2}$, for $n=2,3,4$ and 5, each of
+which is a limit set of a geometrically finite Kleinian group. We also describe
+some of their properties
+",Wild knots in higher dimensions as limit sets of Kleinian groups,National Autonomous University of Mexico
+32,Alberto Verjovsky,math.DG math.CV math.GT,"  In this paper we survey $n$-dimensional solenoidal manifolds for $n=1,2$ and
+3, and present new results about them. Solenoidal manifolds of dimension $n$
+are metric spaces locally modeled on the product of a Cantor set and an open
+$n$-dimensional disk. Therefore, they can be ""laminated"" (or ""foliated"") by
+$n$-dimensional leaves. By a theorem of A. Clark and S. Hurder, topologically
+homogeneous, compact solenoidal manifolds are McCord solenoids i.e. are
+obtained as the inverse limit of an increasing tower of finite, regular covers
+of a compact manifold with an infinite and residually finite fundamental group.
+In this case their structure is very rich since they are principal Cantor-group
+bundles over a compact manifold and they behave like ""laminated"" versions of
+compact manifolds, thus they share many of their properties. These objects
+codify the commensurability properties of manifolds.
+",Low-dimensional solenoidal manifolds,National Autonomous University of Mexico
+33,Alberto Verjovsky,math.SG math.GT,"  We construct a smooth codimension-one foliation on the five-sphere in which
+every leaf is a symplectic four-manifold and such that the symplectic structure
+varies smoothly. Our construction implies the existence of a complete regular
+Poisson structure on the five-sphere.
+","A smooth codimension-one foliation of the five-sphere by symplectic
+  leaves",National Autonomous University of Mexico
+34,Alberto Verjovsky,math.GT,"  We say that a topological $n$-manifold $N$ is a cubical $n$-manifold if it is
+contained in the $n$-skeleton of the canonical cubulation $\mathcal{C}$ of
+${\mathbb{R}}^{n+k}$ ($k\geq1$). In this paper, we prove that any closed,
+oriented cubical $2$-manifold has a transverse field of 2-planes in the sense
+of Whitehead and therefore it is smoothable by a small ambient isotopy.
+",Smoothing closed gridded surfaces embedded in ${\mathbb R}^4$,National Autonomous University of Mexico
+35,Alberto Verjovsky,math.DG math.AG,"  For $n \geq 1$, the twistor space $\mathfrak{Z}(\mathbb{S}^{2n})$ of the
+conformal $2n$-sphere is biholomorphic to the Zariski closure, taken in the
+complex Grassmannian manifold $\mathbf{G}(n+1, 2n+2)$, of the set of graphs of
+skew-symmetric linear endomorphism of $\mathbb{C}^{n+1}$. We use this fact to
+describe a natural stratification of the twistor space
+$\mathfrak{Z}(\mathbb{S}^{2n})$ with $n \geq 3$, in terms of what we have
+called {\it generalised complex orthogonal Stiefel manifolds} of
+$\mathbb{C}^{n+1}$. In particular, the twistor space
+$\mathfrak{Z}(\mathbb{S}^{6})$ is biholomorphic to a non-singular complex
+quadric hypersurface in $\mathbb{P}^{7}$. We explicitly construct a
+real-analytic foliation, by linear 3-folds, of this quadric hypersurface such
+that the quotient space is isomorphic to the 6-sphere with its standard metric.
+This foliation is Riemannian with respect to the Fubini-Study metric and
+isometrically equivalent to the twistor fibration over the 6-sphere.
+","Skew-symmetric complex matrices, pure spinors, the twistor space of the
+  conformal $2n$-sphere, and the Fano variety of linear $n$-folds of a
+  non-singular complex quadric hypersurface in $\mathbb{P}^{2n+1}$",National Autonomous University of Mexico
+36,Alberto Verjovsky,math.GT,"  In this paper we study topological surfaces as gridded surfaces in the
+2-dimensional scaffolding of cubic honeycombs in Euclidean and hyperbolic
+spaces.
+",Topological surfaces as gridded surfaces in geometrical spaces,National Autonomous University of Mexico
+37,Alberto Verjovsky,math.DG math.AT,"  We study the space of deformations of a smooth foliation of the 5-sphere by
+complex manifolds
+","On the moduli space of certain smooth codimension one foliations of the
+  5-sphere by complex surfaces",National Autonomous University of Mexico
+38,Alberto Verjovsky,math.AT math.AG,"  In the context of orientable circuits and subcomplexes of these as
+representing certain singular spaces, we consider characteristic class formulas
+generalizing those classical results as seen for the Riemann-Hurwitz formula
+for regulating the topology of branched covering maps and that for monoidal
+transformations which include the standard blowing-up process. Here the results
+are presented as cap product pairings, which will be elements of a suitable
+homology theory, rather than characteristic numbers as would be the case when
+taking Kronecker products once Poincar\'e duality is defined. We further
+consider possible applications and examples including branched covering maps,
+singular varieties involving virtual tangent bundles, the
+Chern-Schwartz-MacPherson class, the homology L-class, generalized signature,
+and the cohomology signature class.
+","Homology theory formulas for generalized Riemann-Hurwitz and generalized
+  monoidal transformations",National Autonomous University of Mexico
+39,Alberto Verjovsky,math.GT,"  In this paper we prove that a wild knot $K$ which is the limit set of a
+Kleinian group acting conformally on the unit 3-sphere, with its standard
+metric, is homogeneous: given two points $p, q\in{K}$ there exists a
+homeomorphism $f$ of the sphere such that $f(K)=K$ and $f(p)=q$. We also show
+that if the wild knot is a fibered knot then we can choose an $f$ which
+preserves the fibers.
+",Homogeneity of dynamically defined wild knots,National Autonomous University of Mexico
+40,Alberto Verjovsky,math.GT,"  In this paper, we prove that given two cubical links of dimension two in
+${\mathbb R}^4$, they are isotopic if and only if one can pass from one to the
+other by a finite sequence of cubulated moves. These moves are analogous to the
+Reidemeister and Roseman moves for classical tame knots of dimension one and
+two, respectively.
+",Cubulated moves for 2-knots,National Autonomous University of Mexico
+41,Alberto Verjovsky,math.CV,"  We generalize the Ahlfors-Bers theory to the adelic Riemann sphere. In
+particular, after defining the appropriate notion of a Beltrami differential in
+the solenoidal context, we give a sufficient condition on it such that the
+corresponding Beltrami equation has a quasiconformal homeomorphism solution;
+i.e. The Ahlfors-Bers Theorem in the solenoidal case. This additional condition
+on the solenoidal Beltrami differentials can be written as a Banach norm in a
+subspace of solenoidal differentials. Moreover, this subspace is the completion
+under this norm of those solenoidal differentials locally constant at the
+fiber. As a toy example, we show how this technique works on a linear problem:
+We generalize the diophantine equation complex analytic extension problem to
+the respective solenoidal space.
+",Adelic solenoid II: Ahlfors-Bers theory,National Autonomous University of Mexico
+42,Alberto Verjovsky,math.DS,"  Inspired by the works of Zagier, we study the probability measures $\nu(t)$
+with support on the flat tori which are the compact orbits of the maximal
+unipotent subgroup acting holomorphically on the positive orthonormal frame
+bundle $\mathcal{F}({M}_D)$ of 3-dimensional hyperbolic Bianchi orbifolds
+${M}_D=\mathbb{H}^3/\widetilde{\Gamma}_D$, of finite volume and with only one
+cusp. Here $\Gamma_D=PSL(2, \mathcal{O})$, where $\mathcal{O}$ is the ring of
+integers of an imaginary quadratic field of class number one.
+","Eisenstein series and equidistribution of Lebesgue probability measures
+  on compact leaves of the horocycle foliations of Bianchi 3-orbifolds",National Autonomous University of Mexico
+43,Alberto Verjovsky,math.CV math.AG,"  In this paper, following Grothendieck {\it Esquisse d'un programme}, which
+was motivated by Belyi's work, we study some properties of surfaces $X$ which
+are triangulated by (possibly ideal) isometric equilateral triangles of one of
+the spherical, euclidean or hyperbolic geometries. These surfaces have a
+natural Riemannian metric with conic singularities. In the euclidean case we
+analyze the closed geodesics and their lengths. Such surfaces can be given the
+structure of a Riemann surface which, considered as algebraic curves, are
+defined over $\bar{\mathbb{Q}}$ by a theorem of Belyi. They have been studied
+by many authors of course. Here we define the notion of connected sum of two
+Belyi functions and give some concrete examples. In the particular case when
+$X$ is a torus, the triangulation leads to an elliptic curve and we define the
+notion of a ""peel"" obtained from the triangulation (which is a metaphor of an
+orange peel) and relate this peel with the modulus $\tau$ of the elliptic
+curve. Many fascinating questions arise regarding the modularity of the
+elliptic curve and the geometric aspects of the Taniyama-Shimura-Weil theory.
+","Some remarks on equilateral triangulations of surfaces and Belyi
+  functions",National Autonomous University of Mexico
+44,Alberto Verjovsky,math.DS math.NT,"  Inspired by the work of Zagier, we study geometrically the probability
+measures $m_y$ with support on the closed horocycles of the unit tangent bundle
+$M=\text{PSL}(2,\mathbb{R})/\text{PSL}(2,\mathbb{Z})$ of the modular orbifold
+$\text{PSL}(2,\mathbb Z)$. In fact, the canonical projection
+$\mathfrak{p}:M\to\mathbb{H}/\text{PSL}(2,\mathbb Z)$ it is actually a Seifert
+fibration over the orbifold with two especial circle fibers corresponding to
+the two conical points of the modular orbifold. Zagier proved that $m_y$
+converges to normalized Haar measure $m_o$ of $M$ as $y\to0$: for every smooth
+function $f:M\to \mathbb R$ with compact support $m_y(f)=m_0(f)+o(y^\frac12)$
+as $y\to0$. He also shows that
+  $m_y(f)=m_0(f)+o(y^{\frac34-\epsilon})$ for all $\epsilon>0$ and smooth
+function $f$ with compact support in $M$ if and only if the Riemann hypothesis
+is true. In this paper we show that the exponent $\frac12$ is optimal if $f$ is
+the characteristic function of certain open sets in $M$. This of course does
+not imply that the Riemann hypothesis is false. It is required the
+differentiability of the functions in the theorem.
+","Arithmetic, geometry and dynamics in the unit tangent bundle of the
+  modular orbifold",National Autonomous University of Mexico
+45,Alberto Verjovsky,math.GT,"  In this paper, we prove than given two cubic knots $K_1$, $K_2$ in
+$\mathbb{R}^3$, they are isotopic if and only if one can pass from one to the
+other by a finite sequence of cubulated moves. These moves are analogous to the
+Reidemeister moves for classical tame knots. We use the fact that a cubic knot
+is determined by a cyclic permutation of contiguous vertices of the
+$\mathbb{Z}^3$-lattice (with some restrictions), to describe some of the
+classic invariants and properties of the knots in terms of such cyclic
+permutations, by projecting onto a plane such that it is injective when
+restricted to the $\mathbb{Z}^3$-lattice and the image of the
+$\mathbb{Z}^3$-lattice is dense.
+",Cubulated moves and discrete knots,National Autonomous University of Mexico
+46,Alberto Verjovsky,math.CV,"  We construct an Ahlfors-Bers complex analytic model for the Teichm\""uller
+space of the universal hyperbolic lamination (also known as Sullivan's
+Teichm\""uller space) and the renormalized Weil-Petersson metric on it as an
+extension of the usual one. In this setting, we prove that Sullivan's
+Teichm\""uller space is K\""ahler isometric biholomorphic to the space of
+continuous functions from the profinite completion of the fundamental group of
+a compact Riemann surface of genus greater than or equal to two to the
+Teichm\""uller space of this surface; i.e. We find natural K\""ahler coordinates
+for the Sullivan's Teichm\""uller space. This is the main result. As a
+corollary, we show the expected fact that the Nag-Verjovsky embedding is
+transversal to the Sullivan's Teichm\""uller space contained in the universal
+one.
+","Teichm\""uller theory of the universal hyperbolic lamination",National Autonomous University of Mexico
+47,Alberto Verjovsky,math.AT,"  We construct open book structures on moment-angle manifolds and give a new
+construction of examples of contact manifolds in arbitrarily large dimensions.
+","Open Book Structures on Moment-Angle Manifolds $Z^{\mathbb C}(\Lambda)$
+  and Higher Dimensional Contact Manifolds",National Autonomous University of Mexico
+48,Alberto Verjovsky,math.CV,"  These are notes for the CIME school on Complex non-K\""ahler geometry from
+July 9th to July 13th of 2018 in Cetraro, Italy. It is an overview of different
+properties of a class of non-K\""ahler compact complex manifolds called LVMB
+manifolds, obtained as the Hausdorff space of leaves of systems of commuting
+complex linear equations in an open set in complex projective space ${{mathbb
+P}_{\mathbb C}}^{n-1}$
+","Intersection of quadrics in ${\mathbb{C}}^n$, moment-angle manifolds,
+  complex manifolds and convex polytopes",National Autonomous University of Mexico
+49,Alberto Verjovsky,math.GT math.DS,"  In this paper we consider the Kleinian groups acting conformally on the
+sphere $\mathbb{S}^{n+2}$ $(1\leq{n}\leq5)$ which have as limit sets wild
+spheres $K^n$ which were constructed in \cite{BHV} and prove that $K^n$ is
+ambient homogeneous. In other words, given two points $p,\,\,q\in{K}$ there
+exists a homeomorphism $\psi:\mathbb{S}^{n+2}\rightarrow\mathbb{S}^{n+2} $ such
+that $\psi(K)=K$ and $\psi(p)=q$.
+","Some examples of dynamically defined ambient homogeneous wild knots in
+  higher dimensions",National Autonomous University of Mexico
+50,Alberto Verjovsky,math.SG math.AT,"  We construct new examples of contact manifolds in arbitrarily large
+dimensions. These manifolds which we call quasi moment-angle manifolds, are
+closely related to the classical moment-angle manifolds.
+","Moment-angle manifolds, intersection of quadrics and higher dimensional
+  contact manifolds",National Autonomous University of Mexico
+51,Alberto Verjovsky,math.DS,"  This article presents a generalization of the notion of \emph{Poincar\'e
+rotation set} to homeomorphisms of the ad\`ele class group
+$\mathbb{A}/\mathbb{Q}$ of the rational numbers $\mathbb{Q}$, which is a
+connected compact abelian group which can be identified with the
+one-dimensional universal solenoid $\mathbf{S}$, \ie the algebraic universal
+covering of the circle. The definition is first introduced in general for
+homeomorphisms of $\mathbf{S}$ which are isotopic to a translation, and then
+specializing in homeomorphisms of $\mathbf{S}$ isotopic to the identity, in
+which case the rotation set is a closed interval contained in the base leaf
+(the connected component of the identity). If in the latter case the rotation
+interval reduces to a single element $\rho$ and $\rho$ is irrational (\ie it is
+a monothetic generator of $\mathbf{S}$), we show that the homeomorphism is
+semiconjugate to the translation $z\mapsto\rho{z}$, like in the classical
+theory of Poincar\'e. This theory is valid for any general compact abelian one
+dimensional solenoidal group $\mathbf{S}_G$, which are Pontryagin duals of
+dense subgroups $G$ of the rational numbers with the discrete topology. These
+solenoidal groups are one-dimensional laminations which are locally
+homeomorphic to the product of a Cantor set by an interval so they behave very
+much like a ``diffuse'' version of the circle. Our approach differs from others
+because we use Pontryagin duality of compact abelian groups to define the
+rotation sets.
+  \end{abstract}
+",Poincar\'e theory for compact abelian one-dimensional solenoidal groups,National Autonomous University of Mexico
+52,Alberto Verjovsky,math.AT math.AG,"  We consider a generalized Riemann-Hurwitz formula as it may be applied to
+rational maps between projective varieties having an indeterminacy set and
+fold-like singularities. The case of a holomorphic branched covering map is
+recalled. Then we see how the formula can be applied to iterated maps having
+branch-like singularities. Separately, we consider a further application
+involving the Chern classes of determinantal varieties when the latter are
+realized as the degeneracy loci of certain vector bundle morphisms.
+","Rational and iterated maps, degeneracy loci, and the generalized
+  Riemann-Hurwitz formula",National Autonomous University of Mexico
+53,Alberto Verjovsky,math.GT math.DG,"  Using the rings of Lipschitz and Hurwitz integers $\mathbb{H}(\mathbb{Z})$
+and $\mathbb{H}ur(\mathbb{Z})$ in the quaternion division algebra $\mathbb{H}$,
+we define several Kleinian discrete subgroups of $PSL(2,\mathbb{H})$
+","Quaternionic Kleinian modular groups and arithmetic hyperbolic orbifolds
+  over the quaternions",National Autonomous University of Mexico
+54,Alberto Verjovsky,math.AT math.GT,"  We construct open book structures on all moment-angle manifolds and describe
+the topology of their leaves and bindings under certain restrictions. II. We
+also show, using a recent deep result about contact forms due to Borman,
+Eliashberg and Murphy [6], that every odd-dimensional moment-angle manifold
+admits a contact structure. This contrasts with the fact that, except for a
+few, well-determined cases, even-dimensional ones do not admit symplectic
+structures. We obtain the same results for large families of more general
+intersections of quadrics.
+",Some Open Book and Contact Structures on Moment-Angle Manifolds,National Autonomous University of Mexico
+55,Alberto Verjovsky,math.CV math.NT,"  Topologically the adelic Riemann sphere is the suspension of the adelic
+solenoid and because of this relation, here we study the adelic solenoid by
+studying the adelic Riemann sphere topology. The main result is the
+Birkhoff-Grothendieck Theorem: A holomorphic vector bundle splits as a sum of
+holomorphic line bundles whose Chern character is now a rational number. As a
+consequence, the Picard group is isomorphic to the additive group of rational
+numbers and the $K$--ring has new elements that factor the tautological class.
+",Adelic solenoid I: Structure and topology,National Autonomous University of Mexico
+56,Alejandro Rivera,math.PR,"  Let f be a stationary isotropic non-degenerate Gaussian field on R^2. Assume
+that f = q * W where q is both C^2 and L^2 and W is the L^2 white noise on R^2.
+We extend a result by Stephen Muirhead and Hugo Vanneuville by showing that,
+assuming that q * q is pointwise non-negative and has fast enough decay, the
+set {f > -l} percolates with probability one when l > 0 and with probability
+zero if l < 0 or l = 0. We also prove exponential decay of crossing
+probabilities and uniqueness of the unbounded cluster. To this end, we study a
+Gaussian field g defined on the torus and establish a superconcentration
+formula for the threshold T(g) which is the minimal value such that {g > -T(g)}
+contains a non-contractible loop. This formula follows from a Gaussian
+Talagrand type inequality.
+",Talagrand's inequality in planar Gaussian field percolation,Carnegie Mellon University
+57,Alejandro Rivera,math.PR,"  For the Bargmann-Fock field on R d with d $\ge$ 3, we prove that the critical
+level c (d) of the percolation model formed by the excursion sets {f $\ge$ } is
+strictly positive. This implies that for every sufficiently close to 0 (in
+particular for the nodal hypersurfaces corresponding to the case = 0), {f = }
+contains an unbounded connected component that visits ""most"" of the ambient
+space. Our findings actually hold for a more general class of positively
+correlated smooth Gaussian fields with rapid decay of correlations. The results
+of this paper show that the behaviour of nodal hypersurfaces of these Gaussian
+fields in R d for d $\ge$ 3 is very different from the behaviour of nodal lines
+of their two-dimensional analogues. Contents
+","Existence of an unbounded nodal hypersurface for smooth Gaussian fields
+  in dimension d $\ge$ 3",Carnegie Mellon University
+58,Alejandro Rivera,math.PR math.SP,"  Let ($\Sigma$, g) be a closed connected surface equipped with a riemannian
+metric. Let ($\lambda$ n) n$\in$N and ($\psi$ n) n$\in$N be the increasing
+sequence of eigenvalues and the sequence of corresponding L 2-normalized
+eigenfunctions of the laplacian on $\Sigma$. For each L \textgreater{} 0, we
+consider $\phi$ L = 0\textless{}$\lambda$n$\le$L $\xi$n $\sqrt$ $\lambda$n
+$\psi$ n where the $\xi$ n are i.i.d centered gaussians with variance 1. As L
+$\rightarrow$ $\infty$, $\phi$ L converges a.s. to the Gaussian Free Field on
+$\Sigma$ in the sense of distributions. We first compute the asymptotic
+behavior of the covariance function for this family of fields as L
+$\rightarrow$ $\infty$. We then use this result to obtain the asymptotics of
+the probability that $\phi$ L is positive on a given open proper subset with
+smooth boundary. In doing so, we also prove the concentration of the supremum
+of $\phi$ L around 1 $\sqrt$ 2$\pi$ ln L.
+",Hole probability for nodal sets of the cut-off Gaussian Free Field,Carnegie Mellon University
+59,Alejandro Rivera,math.SP math.PR,"  Let $\mathcal{M}$ be a smooth manifold of positive dimension $n$ equipped
+with a smooth density $d\mu_{\mathcal{M}}$. Let $A$ be a polyhomogeneous
+elliptic pseudo-differential operator of positive order $m$ on $\mathcal{M}$
+which is symmetric for the $L^2$ scalar product defined by
+$d\mu_{\mathcal{M}}$. For each $L>0$, the space $U_L=\bigoplus_{\lambda\leq
+L}Ker(A-\lambda Id)$ is a finite dimensional subspace of
+$C^\infty(\mathcal{M})$. Let $\Pi_L$ be the spectral projector onto $U_L$.
+Given $s\in\mathbb{R}$, we compute the asymptotics of the integral kernel $K_L$
+of $\Pi_LA^{-s}$ in the cases where $n>ms$ and $n=ms$ respectively. Next,
+assuming that $\mathcal{M}$ is closed, let $(e_n)_{n\in\mathbb{N}}$ and
+$(\lambda_n)_{n\in\mathbb{N}}$ be the sequence of $L^2$ normalized
+eigenfunctions and eigenvalues of $A$ where the latter sequence organized in
+increasing order. Let $(\xi_n)_{n\in\mathbb{N}}$ be a sequence of independent
+centered gaussians of variance $1$. We fix a parameter $s\in\mathbb{R}$ such
+that $n\geq ms$ and consider the family $(\phi_L)_{L>0}$ of smooth random
+fields on $\mathcal{M}$ defined by \[\phi_L=\sum_{0<\lambda_j\leq
+L}\lambda_j^{-\frac{s}{2}}\xi_je_j\] for each $L>0$. It turns out that the
+covariance function of $\phi_L$ is $K_L$. Using this information, we apply the
+derived asymptotics to study the zero set of $\phi_L$. If $n>ms$ then the
+number of components of the zero set of $\phi_L$ concentrates around
+$aL^{\frac{n}{m}}$ for some positive constant $a$. On the other hand, if
+$n=ms$, each Betti number of the zero set has an expectation bounded by
+$C\ln\Big(L^{\frac{1}{m}}\Big)^{-\frac{1}{2}}L^{\frac{n}{m}}$ where $C$ is an
+explicit constant. When $\mathcal{M}$ is a closed surface with a Riemmanian
+metric, $A$ is the Laplacian and $d\mu_\mathcal{M}$ is the Riemmanian volume,
+$C$ equals $\frac{1}{4\pi^2}\sqrt{\frac{3}{2}}Vol(\mathcal{M})$.
+","Anomalies in local Weyl laws and applications to random topology at
+  critical dimension",Carnegie Mellon University
+60,Alejandro Rivera,math.PR,"  In this article, we study the excursions sets
+$\mathcal{D}\_p=f^{-1}([-p,+\infty[)$ where $f$ is a natural real-analytic
+planar Gaussian field called the Bargmann-Fock field. More precisely, $f$ is
+the centered Gaussian field on $\mathbb{R}^2$ with covariance $(x,y) \mapsto
+\exp(-\frac{1}{2}|x-y|^2)$. In [BG16], Beffara and Gayet prove that, if $p \leq
+0$, then a.s. $\mathcal{D}\_p$ has no unbounded component. We show that
+conversely, if $p>0$, then a.s. $\mathcal{D}\_p$ has a unique unbounded
+component. As a result, the critical level of this percolation model is $0$. We
+also prove exponential decay of crossing probabilities under the critical
+level. To show these results, we develop several tools including a KKL-type
+result for biased Gaussian vectors (based on the analogous result for product
+Gaussian vectors by Keller, Mossel and Sen in [KMS12]) and a sprinkling
+inspired discretization procedure. These intermediate results hold for more
+general Gaussian fields, for which we prove a discrete version of our main
+result.

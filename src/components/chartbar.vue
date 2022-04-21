@@ -9,15 +9,6 @@
           label="Solo field"
           solo
         ></v-select>
-          <!-- <v-btn
-          id = "btn"
-          color="info"
-          @click="change"
-          class="ma-2 white--text"
-        > Render</v-btn> -->
-
-        <!-- <button >randomize</button> -->
-
       </div>
     </div>
   </div>
@@ -85,14 +76,10 @@
         let PieData = JSON.parse(JSON.stringify(this.PieDate)).slice(0, 10)
         let label = [];
         let value = [];
-        // let data = [];
         console.log("pieData",PieData)
         for(let i = 0; i < 10; i++) {
-          //对应的值
           label.push(PieData[i].topic);
           value.push(PieData[i].total);
-          // data.push({"label" : PieData[i].topic, "value": PieData[i].total})
-
         }
         console.log("ad",label,value)
           var svg = d3.select("#PieSvg")
@@ -223,28 +210,28 @@
       getInstitution: function() {
         this.$axios({
         method: "get",
-        url: "http://localhost:8081/institution", // 接口地址
+        url: "http://localhost:8081/institution", 
         }).then(response => {
           let res = [];
           response.data.forEach(item => {
             res.push(item.institution);
           })
           this.institutions = res;
-          console.log("insitution",this.institutions);   // 成功的返回  
-        }).catch(error => console.log(error, "error")); // 失败的返回
+          console.log("insitution",this.institutions);   
+        }).catch(error => console.log(error, "error")); 
       },
 
       getInstitutionDetail: function() {
         this.$axios({
         method: "post",
         data: {
-          selected: this.selected   // 传接口参数
+          selected: this.selected  
         },
-        url: "http://localhost:8081/institutionDetail", // 接口地址
+        url: "http://localhost:8081/institutionDetail",
         }).then(response => {
           this.PieDate = response.data;
           console.log("pasd",this.PieDate)
-        }).catch(error => console.log(error, "error")); // 失败的返回
+        }).catch(error => console.log(error, "error")); 
       },
     }
   }

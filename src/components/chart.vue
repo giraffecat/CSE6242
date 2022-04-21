@@ -216,21 +216,21 @@
             res.push(item.institution);
           })
           this.institutions = res;
-          console.log("insitution",this.institutions);   // 成功的返回  
-        }).catch(error => console.log(error, "error")); // 失败的返回
+          console.log("insitution",this.institutions);   
+        }).catch(error => console.log(error, "error")); 
       },
 
     getInstitutionDetail: function() {
         this.$axios({
         method: "post",
         data: {
-          selected: this.selected   // 传接口参数
+          selected: this.selected  
         },
-        url: "http://localhost:8081/institutionDetail", // 接口地址
+        url: "http://localhost:8081/institutionDetail", 
         }).then(response => {
           this.BarDate = response.data;
           console.log("pasd",this.BarDate)
-        }).catch(error => console.log(error, "error")); // 失败的返回
+        }).catch(error => console.log(error, "error")); 
       },
     },
   }

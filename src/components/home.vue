@@ -1,5 +1,5 @@
 <template>
-  <v-card height="900px">
+  <div height="900px">
     <v-toolbar
         dark
       >
@@ -58,8 +58,7 @@
     <chart v-if="show == 1"></chart>
     <chartbar v-if="show == 2"></chartbar>
     <paper-list :searchWord="searchWord" v-if="show == 3"></paper-list>
-
-  </v-card>
+  </div>
 </template>
 
 <script>
@@ -84,11 +83,11 @@ import PaperList from './paperList.vue';
         items: [
           { title: 'Heterogenous graphs', icon: 'mdi-graphql' },
           { title: 'Chart bar', icon: 'mdi-chart-bar' },
-          { title: 'chart-areaspline', icon: 'mdi-chart-areaspline' },
+          { title: 'Pie chart', icon: 'mdi-chart-pie' },
           { title: 'paper-list', icon: 'mdi-format-list-bulleted' },
 
         ],
-        show: 3,
+        show: 1,
         searchWord: "",
       }
     },

@@ -1,5 +1,5 @@
 DESCRIPTION:
-Our project is built by separating the front and back ends, the front end uses the Vue framework, and the back end uses the express framework. The front end uses Vue because of component programming, each page is an independent component, located under src/component. The backend uses the express framework because it is lightweight, and only one file is needed to connect to the database and build routes.
+Our project is built by separating the front and back ends, the front end uses the Vue framework, and the back end uses the express framework. The front end uses Vue because of component programming, each page is an independent component, located under src/component. The backend uses the express framework because it is lightweight, and only one file is needed to connect to the database and build routes to send data.
 
 INSTALLATION:
 step1. Download the source file from GitHub

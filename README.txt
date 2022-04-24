@@ -38,3 +38,7 @@ npm run serve
 2. Run back-end
 cd backend
 node server.js
+
+3. Run keyword extraction and matching part
+cd Keyword-Extraction
+jupyter notebook

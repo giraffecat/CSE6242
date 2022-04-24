@@ -70,24 +70,21 @@ app.post('/GetInstitutionPaper', function (req, res) {
   })
 })
 
-app.get('/GetInstitutionCategory', function (req, res) {
-  var promise = new Promise(function(resolve, reject){
-    var query = "select DISTINCT topic from topicBySchool";
-    connection.query(query, function (err, result) {   
-    let data = result
-    resolve(data)  
-    // res.end(JSON.stringify(data));
-    });
-  }).then(data => {
-    let ans = [];
-    let temp = JSON.parse(JSON.stringify(data))
-    for(let i = 0; i < temp.length; i++) {
-      console.log("ad",temp)
-      ans.push(temp[i].topic)
-    }
-    console.log("ans",ans)
-    res.end(JSON.stringify(ans));
-  })
+//hash table => scan data
+app.get('/paperList4000', async function (req, res) {
+ let data = {}
+ var promise = new Promise(function(resolve, reject){
+   var query = 'select id, title from paper limit 4000';
+   connection.query(query, function (err, result) {
+   if(err){
+     console.log('[INSERT ERROR] - ',err.message);
+     return;
+   }        
+   resolve(result)  
+   });
+ }).then(data => {
+    res.end(JSON.stringify(data));
+ })
 })
  
  
@@ -168,6 +165,7 @@ app.post('/GetInsitutionPaper', function (req, res) {
     res.end(JSON.stringify(data));
   })
 })
+
 var server = app.listen(8081, function () {
  
   var host = server.address().address

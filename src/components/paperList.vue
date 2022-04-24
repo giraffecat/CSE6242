@@ -55,7 +55,7 @@
                 <span class="font-weight-thin text-subtitle-1"> {{item.author}} </span>
                 <span class="font-weight-thin text-subtitle-1 ml-4" > {{item.affiliation}}</span>
               </v-list-item-title>
-              <v-list-item-subtitle>key words</v-list-item-subtitle>
+              <v-list-item-subtitle>key words: {{item.key_word}}</v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
         </v-card>
@@ -78,20 +78,12 @@
               <span class="ml-8 text-subtitle-1 font-weight-black">ID:</span> {{item.id}}
             </v-card-text>
             <v-card-text>
-              <span class="text-subtitle-1 font-weight-black">Key words:</span>
+              <span class="text-subtitle-1 font-weight-black">Key words: {{item.key_word}}</span>
             </v-card-text>
-
-            <v-divider></v-divider>
-
-            <v-card-actions>
-              <v-spacer></v-spacer>
-              <v-btn
-                color="primary"
-                text
-              >
-                More Like This
-              </v-btn>
-            </v-card-actions>
+            <v-card-text>
+              <div class="text-subtitle-1 font-weight-black">Related Paper:</div>
+              <div v-for="value in item.relatePaper" :key="value[1]"><span class="font-weight-black">Title: </span>{{value[0]}} <span class="ml-5 font-weight-black"> Match ratio:</span> {{value[1]}} </div>
+            </v-card-text>
           </v-card>
         </v-dialog>
       </div>
@@ -120,6 +112,7 @@ export default {
     mounted() {
       this.getData();
       this.getInstitution();
+      this.GetPaper4000();
     },
     props: {
       searchWord: String,
@@ -134,6 +127,8 @@ export default {
         selected_ins:[],
         selected_cate: [],
         institutions: [],
+        PaperMap:new Map(),
+        flag:false,
         categories: ["Statistical Mechanics","Probability","Physics and Society","High Energy Physics - Theory","Quantum Physics","Information Theory","Optics","High Energy Physics - Phenomenology","Machine Learning","Data Analysis, Statistics and Probability","Strongly Correlated Electrons","Computer Vision and Pattern Recognition","High Energy Physics - Lattice","Statistics Theory","Soft Condensed Matter","Methodology","Mesoscale and Nanoscale Physics","Populations and Evolution","Computer Science and Game Theory","Differential Geometry","Computational Complexity","Algebraic Topology","Optimization and Control","Astrophysics of Galaxies","General Relativity and Quantum Cosmology","Distributed, Parallel, and Cluster Computing","Systems and Control","Mathematical Physics","Robotics","Solar and Stellar Astrophysics","Cryptography and Security","Cosmology and Nongalactic Astrophysics","Networking and Internet Architecture","Computation and Language","Data Structures and Algorithms","High Energy Astrophysical Phenomena","Materials Science","Quantitative Methods","Signal Processing","Disordered Systems and Neural Networks","Quantum Gases","Algebraic Geometry","Earth and Planetary Astrophysics","Pattern Formation and Solitons","Atomic Physics","Numerical Analysis","Software Engineering","Geometric Topology","Chemical Physics","Accelerator Physics","Superconductivity","Programming Languages","Physics Education","Representation Theory","Instrumentation and Detectors","Fluid Dynamics","General Finance","Human-Computer Interaction","Social and Information Networks","High Energy Physics - Experiment","Functional Analysis","Other Condensed Matter","Statistical Finance","Combinatorics","Artificial Intelligence","Analysis of PDEs","Other Computer Science","Chaotic Dynamics","General Physics","Image and Video Processing","Classical Physics","Plasma Physics","Sound","Databases","Computational Physics","Molecular Networks","Number Theory","Neural and Evolutionary Computing","Adaptation and Self-Organizing Systems","Biological Physics","Cell Behavior","Applications","Nuclear Experiment","Popular Physics","Discrete Mathematics","Applied Physics","Hardware Architecture","Operating Systems","Performance","Instrumentation and Methods for Astrophysics","Information Retrieval","Dynamical Systems","Medical Physics","Multimedia","Computers and Society","Multiagent Systems","Logic","Quantum Algebra","Risk Management","Atmospheric and Oceanic Physics","Digital Libraries","Economics","Trading and Market Microstructure","Formal Languages and Automata Theory","Complex Variables","Symbolic Computation","History and Philosophy of Physics","Space Physics","Audio and Speech Processing","Nuclear Theory","Logic in Computer Science","Classical Analysis and ODEs","Rings and Algebras","Operator Algebras","History and Overview","Spectral Theory","Other Statistics","Computational Engineering, Finance, and Science","Graphics","Pricing of Securities","Category Theory","K-Theory and Homology","Computation","Mathematical Finance","Mathematical Software","Theoretical Economics","Other Quantitative Biology","Neurons and Cognition","Portfolio Management","Metric Geometry","Genomics","Geophysics","Commutative Algebra","Computational Geometry","Biomolecules","Cellular Automata and Lattice Gases","General Topology","Symplectic Geometry","Emerging Technologies","General Mathematics","Computational Finance","Exactly Solvable and Integrable Systems","Group Theory","Econometrics","Atomic and Molecular Clusters","Tissues and Organs","General Literature","General Economics","Subcellular Processes"]
       }
     },
@@ -152,7 +147,7 @@ export default {
         }else {
           this.getInstitutionPaper();
         }
-      }
+      },
     },
     methods: {
       onPageChange: function() {
@@ -176,10 +171,62 @@ export default {
           curPage: this.curPage   // 传接口参数
         }
       }).then(response => {
-        console.log(response, "success");   // 成功的返回  
-
-        this.paperList = response.data.data; 
+         // 成功的返回  
+        let data = response.data.data;
+        //related paper的映射
+        for(let i = 0; i < data.length; i++) {
+          data[i].key_word = data[i].key_word.slice(1, data[i].key_word.length - 1);
+          //how?
+          let string = data[i].relatePaper.slice(1, data[i].key_word.length - 1);
+          var re = /\[(.+?)\]/gi
+          let arr = string.match(re)
+          if(arr != null) {
+            for(let i = 0; i < arr.length; i++) {
+              arr[i] = arr[i].slice(1, arr[i].length - 1)
+              arr[i] = arr[i].split(",")
+              for(let j = 0; j < arr[i].length; j++) {
+                arr[i][j] = Number(arr[i][j]);
+              }
+            }
+          }
+          // console.log("arr",arr)
+          data[i].relatePaper = arr; 
+        }
         this.pageLength = Math.floor((response.data.total[0].total / this.itemsPerPage));
+        // let promise = new Promise((resolve, reject) => {
+        //       console.log("exec get")
+
+        //     this.GetPaper4000()
+        //     resolve()
+        //   }).then(res => {
+        //     console.log("exec show")
+        //     this.show()
+        //   })      
+        this.$axios({
+        method: "get",
+        url: "http://localhost:8081/paperList4000", // 接口地址
+        }).then(response => {
+          console.log(response.data, "GetPaper4000");   // 成功的返回  
+          let map = new Map();
+          response.data.forEach(ele => {
+            map.set(ele.id, ele.title)
+          })
+          this.PaperMap = map;
+          console.log("Map",this.PaperMap)
+          let related_paper = [];
+          for(let i = 0; i < data.length; i++) {
+            if(data[i].relatePaper != null) {
+              for(let j = 0; j < data[i].relatePaper.length; j++) {
+                data[i].relatePaper[j][0] = this.PaperMap.get(data[i].relatePaper[j][0]);
+              }
+            }
+          }
+          this.paperList = data;
+
+          console.log("showdata",data)
+
+        })
+       
       }).catch(error => console.log(error, "error")); // 失败的返回
       },
 
@@ -194,9 +241,24 @@ export default {
           curPage: this.curPage   // 传接口参数
         }
         }).then(response => {
-          console.log(response, "success");   // 成功的返回  
           this.paperList = response.data.data;  
-          this.pageLength = Math.floor((response.data.length[0].total / this.itemsPerPage));
+          this.pageLength = Math.floor((response.data.length[0].total / this.itemsPerPage)); 
+        }).catch(error => console.log(error, "error")); // 失败的返回
+      },
+
+      GetPaper4000: function() {
+        this.$axios({
+        method: "get",
+        url: "http://localhost:8081/paperList4000", // 接口地址
+        }).then(response => {
+          console.log(response.data, "GetPaper4000");   // 成功的返回  
+          let map = new Map();
+          response.data.forEach(ele => {
+            map.set(ele.id, ele.title)
+          })
+          this.PaperMap = map;
+          this.flag = !this.flag;
+          console.log("Map",this.PaperMap)
         }).catch(error => console.log(error, "error")); // 失败的返回
       },
 

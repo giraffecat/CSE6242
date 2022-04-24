@@ -87,7 +87,7 @@ import PaperList from './paperList.vue';
           { title: 'paper-list', icon: 'mdi-format-list-bulleted' },
 
         ],
-        show: 1,
+        show: 3,
         searchWord: "",
       }
     },

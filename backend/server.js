@@ -3,7 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var cors=require("cors");
 
-var mysql      = require('mysql');
+var mysql      = require('mysql2');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
